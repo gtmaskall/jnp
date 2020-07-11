@@ -221,6 +221,7 @@ class Notebook:
                 am = re.match(r'\*\*A:\s*\d*\*\*', firstline)
                 if am:
                     cell['source'] = [am.group()]
+                    cell['source'].append(' Your answer here')
                 cells_out.append(cell)
             else:
                 if cell['cell_type'] == 'raw':
